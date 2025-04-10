@@ -2,8 +2,8 @@
 /*
  * Plugin Name: UsersWP Custom Fields Display
  * Description: Affiche les champs personnalisés de UsersWP dans la liste des utilisateurs de l'admin WordPress avec une page de réglages pour choisir les champs.
- * Version: 1.12
- * Author: Pikkendorff
+ * Version: 1.13
+ * Author: Pikkendorff & Grok
  * License: GPL-2.0+
  * Text Domain: uwp-custom-fields-display
  * Domain Path: /languages
@@ -53,6 +53,7 @@ class UsersWPCustomFieldsDisplay {
     public function render_settings_page() {
         $fields = $this->get_all_userswp_fields();
         $selected_fields = get_option('uwp_users_tab_fields', array());
+        $donate_url = 'https://www.paypal.com/donate/?hosted_button_id=EFBK5UT6BX8JG';
         ?>
         <div class="wrap">
             <h1><?php _e('UsersWP Custom Fields Display Settings', 'uwp-custom-fields-display'); ?></h1>
@@ -76,7 +77,10 @@ class UsersWPCustomFieldsDisplay {
                         </td>
                     </tr>
                 </table>
-                <?php submit_button(); ?>
+                <p class="submit">
+                    <?php submit_button(); ?>
+                    <a href="<?php echo esc_url($donate_url); ?>" class="button" target="_blank"><?php _e('Donate to the Developer', 'uwp-custom-fields-display'); ?></a>
+                </p>
             </form>
         </div>
         <?php
