@@ -1,0 +1,17 @@
+msgid "Custom Fields Display"
+msgstr "Affichage des champs personnalisés"
+
+msgid "UsersWP Custom Fields Display Settings"
+msgstr "Réglages de l’affichage des champs personnalisés UsersWP"
+
+msgid "Fields to Display in Users Tab"
+msgstr "Champs à afficher dans l’onglet Utilisateurs"
+
+msgid "No custom fields found."
+msgstr "Aucun champ personnalisé trouvé."
+
+msgid "Yes"
+msgstr "Oui"
+
+msgid "No"
+msgstr "Non"
